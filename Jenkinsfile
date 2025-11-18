@@ -34,11 +34,11 @@ pipeline {
 
                     # 2. Créer le tag localement
                     # L'option -f (force) permet d'écraser si le tag existe déjà en local
-                    git tag -f -a "v2.${BUILD_NUMBER}" -m "Version livrée par Jenkins"
+                    git tag -f -a "v3.${BUILD_NUMBER}" -m "Version livrée par Jenkins"
 
                     # 3. Pousser le tag vers GitHub
                     # On insère le user/pass dans l'URL de manière sécurisée
-                    git push https://${GIT_USER}:${GIT_PASS}@github.com/aariisto/HelloWorldMaven.git "v2.${BUILD_NUMBER}"
+                    git push https://${GIT_USER}:${GIT_PASS}@github.com/aariisto/HelloWorldMaven.git "v3.${BUILD_NUMBER}"
                 """
             }
         }
